@@ -9,21 +9,21 @@ namespace ConsoleApp1.Builders
 {
     public class ExternalQuoteRequestResponseBuilder : IExternalQuoteRequestResponseBuilder
     {
-        public dynamic BuildRequest(QutationSystem system, PriceRequest priceRequest)
+        public dynamic BuildRequest(QuotationSystem system, PriceRequest priceRequest)
         {
             dynamic exRequest = new ExpandoObject();
 
             switch (system)
             {
-                case QutationSystem.QutationSystem1:
-                case QutationSystem.QutationSystem3:
+                case QuotationSystem.QuotationSystem1:
+                case QuotationSystem.QuotationSystem3:
                     exRequest.FirstName = priceRequest.RiskData.FirstName;
                     exRequest.Surname = priceRequest.RiskData.LastName;
                     exRequest.DOB = priceRequest.RiskData.DOB;
                     exRequest.Make = priceRequest.RiskData.Make;
                     exRequest.Amount = priceRequest.RiskData.Value;
                     break;
-                case QutationSystem.QutationSystem2:
+                case QuotationSystem.QuotationSystem2:
                     exRequest.FirstName = priceRequest.RiskData.FirstName;
                     exRequest.LastName = priceRequest.RiskData.LastName;
                     exRequest.Make = priceRequest.RiskData.Make;
@@ -37,13 +37,13 @@ namespace ConsoleApp1.Builders
             return exRequest;
         }
 
-        public PriceResponse BuildResponse(QutationSystem system, dynamic externalResponse)
+        public PriceResponse BuildResponse(QuotationSystem system, dynamic externalResponse)
         {
             var res = new PriceResponse();
 
             switch (system)
             {
-                case QutationSystem.QutationSystem1:
+                case QuotationSystem.QuotationSystem1:
                     if (externalResponse.IsSuccess)
                     {
                         res.Price = externalResponse.Price;
@@ -51,15 +51,15 @@ namespace ConsoleApp1.Builders
                         res.Tax = externalResponse.Tax;
                     }
                     break;
-                case QutationSystem.QutationSystem2:
-                    if (externalResponse.HasPrice)
+                case QuotationSystem.QuotationSystem2:
+                    if (externalResponse.HasPrice) // Where we are setting this Has price ?
                     {
                         res.Price = externalResponse.Price;
                         res.InsurerName = externalResponse.Name;
                         res.Tax = externalResponse.Tax;
                     }
                     break;
-                case QutationSystem.QutationSystem3:
+                case QuotationSystem.QuotationSystem3:
                     if (externalResponse.IsSuccess)
                     {
                         res.Price = externalResponse.Price;

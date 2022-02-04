@@ -3,9 +3,9 @@ using ConsoleApp1.Enums;
 
 namespace ConsoleApp1.Model
 {
-    public interface IPriceEngineConfigurations
+    public interface IQuotationSystemConfigurations
     {
         List<string> QuotationSystem2_Makes { get; }
-        QutationSystemConfiguration GetQutationSystemConfiguration(QutationSystem system);
+        QutationSystemConfiguration GetQutationSystemConfiguration(QuotationSystem system);
     }
 }

@@ -28,14 +28,14 @@ namespace ConsoleApp.Tests
 
             var qutationSystem = _quotationSystemFactory.GenerateQutationSystems(request);
 
-            Assert.True(typeof(QuotationSystem1) == qutationSystem.GetType(), $" For the request with DBO qutations system generated is {qutationSystem.GetType()}");
+            Assert.True(typeof(QuotationSystem1) == qutationSystem[0].GetType(), $" For the request with DBO qutations system generated is {qutationSystem.GetType()}");
+            Assert.True(typeof(QuotationSystem3) == qutationSystem[1].GetType(), $" For the request with DBO qutations system generated is {qutationSystem.GetType()}");
 
         }
 
         [TestCase("examplemake1", true)]
         [TestCase("examplemake2", true)]
         [TestCase("examplemake3", true)]
-        [TestCase("no make", false)]
         public void If_BasedOnMake_Should_Return_QuotationSystem2(string make,bool isReturnSystemQuationSystem2)
         {
             var request = GeneratePriceRequest();
@@ -43,9 +43,21 @@ namespace ConsoleApp.Tests
 
             var qutationSystem = _quotationSystemFactory.GenerateQutationSystems(request);
 
-            Assert.AreEqual(typeof(QuotationSystem2) == qutationSystem.GetType(), isReturnSystemQuationSystem2, $" For the make '{make}' qutations system generated is {qutationSystem.GetType()}");
+            Assert.AreEqual(typeof(QuotationSystem2) == qutationSystem[0].GetType(), isReturnSystemQuationSystem2, $" For the make '{make}' qutations system generated is {qutationSystem.GetType()}");
+            Assert.AreEqual(typeof(QuotationSystem3) == qutationSystem[1].GetType(), isReturnSystemQuationSystem2, $" For the make '{make}' qutations system generated is {qutationSystem.GetType()}");
        }
 
+
+        [TestCase("no make", true)]
+        public void If_Based_on_No_Make_Should_Return_QuotationSystem2(string make, bool isReturnSystemQuationSystem2)
+        {
+            var request = GeneratePriceRequest();
+            request.RiskData.Make = make;
+
+            var qutationSystem = _quotationSystemFactory.GenerateQutationSystems(request);
+
+            Assert.AreEqual(typeof(QuotationSystem3) == qutationSystem[0].GetType(), isReturnSystemQuationSystem2, $" For the make '{make}' qutations system generated is {qutationSystem.GetType()}");
+        }
 
         [Test]
         public void If_NoConditionSatisfies_Should_Return_QuotationSystem3()
@@ -54,7 +66,7 @@ namespace ConsoleApp.Tests
 
             var qutationSystem = _quotationSystemFactory.GenerateQutationSystems(request);
 
-            Assert.True(typeof(QuotationSystem3) == qutationSystem.GetType() , $" For the default qutations system generated is {qutationSystem.GetType()}"); 
+            Assert.True(typeof(QuotationSystem3) == qutationSystem[0].GetType() , $" For the default qutations system generated is {qutationSystem.GetType()}"); 
         }
 
 

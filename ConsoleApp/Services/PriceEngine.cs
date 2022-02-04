@@ -16,16 +16,16 @@ namespace ConsoleApp1.Services
     public class PriceEngine
     {
         private IQuotationSystemFactory _quotationSystemFactory { get; set; }
-        private IPriceResonseBuilder _priceResonseBuilder { get; set; }
+        private IPriceResonseBuilder _priceReasonsBuilder { get; set; }
         private IPriceRequestValidator _priceRequestValidator { get; set; }
-        public PriceEngine() : this(new QuotationSystemFactory(new PriceEngineConfigurations(), new ExternalQuoteRequestResponseBuilder()), new PriceResonseBuilder(), new PriceRequestValidator())
+        public PriceEngine() : this(new QuotationSystemFactory(new QuotationSystemConfigurations(), new ExternalQuoteRequestResponseBuilder()), new PriceReasonsBuilder(), new PriceRequestValidator())
         { 
         }
 
         public PriceEngine(IQuotationSystemFactory quotationSystemFactory, IPriceResonseBuilder priceResonseBuilder, IPriceRequestValidator priceRequestValidator)
         {
             _quotationSystemFactory = quotationSystemFactory;
-            _priceResonseBuilder = priceResonseBuilder;
+            _priceReasonsBuilder = priceResonseBuilder;
             _priceRequestValidator = priceRequestValidator;
         }
 
@@ -39,21 +39,16 @@ namespace ConsoleApp1.Services
             //validation
             priceResponse.ErrorMessage = _priceRequestValidator.Validate(request);
 
-            if (priceResponse.ErrorMessage.Count<=0)
+            if (!priceResponse.ErrorMessage.Any())
             {
                 //now call 3 external system and get the best price 
                 var quotationSystems = _quotationSystemFactory.GenerateQutationSystems(request);
 
                 //get quote from each quation system
-                var priceQuoteTasks = new List<Task<PriceResponse>>();
-                foreach (var quotationSystem in quotationSystems)
-                {
-                    priceQuoteTasks.Add(quotationSystem.GetPriceAsync(request));
-                }
-
+                var priceQuoteTasks = (quotationSystems.Select(quotationSystem => quotationSystem.GetPriceAsync(request))).ToList();
                 await Task.WhenAll(priceQuoteTasks);
 
-                priceResponse = _priceResonseBuilder.BuildResponse(priceQuoteTasks.Where(t => t.IsCompleted).Select(t => t.Result)?.ToList());
+                priceResponse = _priceReasonsBuilder.BuildResponse(priceQuoteTasks.Where(t => t.IsCompleted).Select(t => t.Result)?.ToList());
             } 
 
             return priceResponse;

@@ -9,7 +9,7 @@ namespace ConsoleApp1.QuotationSystems
     public class QuotationSystem2 : BaseQuotationSystem
     {
         public QuotationSystem2(QutationSystemConfiguration config, IExternalQuoteRequestResponseBuilder requestResponseBuilder)
-     : base(QutationSystem.QutationSystem2, config.Url, config.Port, requestResponseBuilder)
+     : base(QuotationSystem.QuotationSystem2, config.Url, config.Port, requestResponseBuilder)
         {
 
         }

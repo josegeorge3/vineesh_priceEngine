@@ -34,3 +34,4 @@ C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\C
 C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\ConsoleApp.Tests.csproj.CopyComplete
 C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\ConsoleApp.Tests.dll
 C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\ConsoleApp.Tests.pdb
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp.Tests.dll.config

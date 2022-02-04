@@ -9,10 +9,10 @@ namespace ConsoleApp1.QuotationSystems
     {
         protected string _url { get; set; }
         protected string _port { get; set; }
-        public QutationSystem _system { get; private set; }
+        public QuotationSystem _system { get; private set; }
         protected IExternalQuoteRequestResponseBuilder _requestResponseBuilder { get; set; }
 
-        public BaseQuotationSystem(QutationSystem system, string url, string port, IExternalQuoteRequestResponseBuilder requestResponseBuilder)
+        public BaseQuotationSystem(QuotationSystem system, string url, string port, IExternalQuoteRequestResponseBuilder requestResponseBuilder)
         {
             _url = url;
             _port = port;

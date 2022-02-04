@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Enums
 {
-    public enum QutationSystem
+    public enum QuotationSystem
     {
-        QutationSystem1,
-        QutationSystem2,
-        QutationSystem3
+        QuotationSystem1,
+        QuotationSystem2,
+        QuotationSystem3
     }
 }
