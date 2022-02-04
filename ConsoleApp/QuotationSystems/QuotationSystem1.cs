@@ -1,4 +1,5 @@
 ﻿using ConsoleApp1.Builders;
+using ConsoleApp1.Enums;
 using ConsoleApp1.Model;
 using System.Dynamic;
 using System.Threading.Tasks;

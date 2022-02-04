@@ -1,4 +1,5 @@
-﻿using ConsoleApp1.Model;
+﻿using ConsoleApp1.Enums;
+using ConsoleApp1.Model;
 using System;
 using System.Dynamic;
 using System.Text;

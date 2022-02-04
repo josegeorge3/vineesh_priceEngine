@@ -55,7 +55,7 @@
     <Compile Include="Model\PriceEngineConfigurations.cs" />
     <Compile Include="Model\PriceResponse.cs" />
     <Compile Include="Model\QutationSystemConfiguration.cs" />
-    <Compile Include="Model\QutationSystem.cs" />
+    <Compile Include="Enums\QutationSystem.cs" />
     <Compile Include="QuotationSystems\BaseQuotationSystem.cs" />
     <Compile Include="QuotationSystems\IQuotationSystem.cs" />
     <Compile Include="Services\PriceEngine.cs" />

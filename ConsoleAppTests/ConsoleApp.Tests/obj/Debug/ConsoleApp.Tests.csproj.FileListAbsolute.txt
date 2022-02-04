@@ -16,3 +16,21 @@ C:\Users\joseg\Downloads\code test\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\Co
 C:\Users\joseg\Downloads\code test\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp1.exe
 C:\Users\joseg\Downloads\code test\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp1.pdb
 C:\Users\joseg\Downloads\code test\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp1.exe.config
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\NUnit3.TestAdapter.dll
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\nunit.engine.dll
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\nunit.engine.api.dll
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\nunit.engine.core.dll
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\testcentric.engine.metadata.dll
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp.Tests.dll
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp.Tests.pdb
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp1.exe
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\nunit.framework.dll
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp1.pdb
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\ConsoleApp1.exe.config
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\bin\Debug\nunit.framework.xml
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\ConsoleApp.Tests.csproj.AssemblyReference.cache
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\ConsoleApp.Tests.csproj.CoreCompileInputs.cache
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\ConsoleApp.Tests.csproj.CopyComplete
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\ConsoleApp.Tests.dll
+C:\Personal\git\vineesh_priceEngine\ConsoleAppTests\ConsoleApp.Tests\obj\Debug\ConsoleApp.Tests.pdb

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ConsoleApp1.Enums;
 
 namespace ConsoleApp1.Model
 {

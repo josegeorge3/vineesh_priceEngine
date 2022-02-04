@@ -1,4 +1,5 @@
-﻿using ConsoleApp1.Model;
+﻿using ConsoleApp1.Enums;
+using ConsoleApp1.Model;
 
 namespace ConsoleApp1.Builders
 {
