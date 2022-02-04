@@ -1,0 +1,7 @@
+C:\Users\joseg\Downloads\code test\ConsoleApp\bin\Debug\ConsoleApp1.exe.config
+C:\Users\joseg\Downloads\code test\ConsoleApp\bin\Debug\ConsoleApp1.exe
+C:\Users\joseg\Downloads\code test\ConsoleApp\bin\Debug\ConsoleApp1.pdb
+C:\Users\joseg\Downloads\code test\ConsoleApp\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\joseg\Downloads\code test\ConsoleApp\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\joseg\Downloads\code test\ConsoleApp\obj\Debug\ConsoleApp1.exe
+C:\Users\joseg\Downloads\code test\ConsoleApp\obj\Debug\ConsoleApp1.pdb

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4d4ffb4a-ffb5-4247-96e8-c447c8b98271": {
+      "ProjectGuid": "4d4ffb4a-ffb5-4247-96e8-c447c8b98271",
+      "DisplayName": "ConsoleApp.Tests",
+      "ColorIndex": 0
+    },
+    "f5f1a649-95cb-45c6-b4d8-ce1a74971eed": {
+      "ProjectGuid": "f5f1a649-95cb-45c6-b4d8-ce1a74971eed",
+      "DisplayName": "ConsoleApp.Tests",
+      "ColorIndex": 1
+    },
+    "7a8fd89a-b378-4a9e-acfd-bd0ae958130b": {
+      "ProjectGuid": "7a8fd89a-b378-4a9e-acfd-bd0ae958130b",
+      "DisplayName": "ConsoleApp1",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}
