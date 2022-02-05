@@ -4,19 +4,20 @@ using ConsoleApp1.Model;
 using ConsoleApp1.QuotationSystems;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleApp.Tests
+namespace ConsoleApp.Tests.Factories
 {
     [TestFixture]
-    public class QuotationSystemFactory_Tests
+    public class QuotationSystemFactory_Tests : BaseTest
     {
-     
-        private IQuotationFactory _quotationSystemFactory { get; set; }
+        protected IQuotationFactory _quotationSystemFactory { get; set; }
         [SetUp]
         public void Initialize()
-        { 
-            _quotationSystemFactory = new QuotationSystemFactory();
+        {
+            InitalizeMoqObjects();
+            _quotationSystemFactory = new QuotationSystemFactory(_configurationMock.Object, _requestResponseBuilderMock.Object);
         }
 
 
@@ -27,51 +28,54 @@ namespace ConsoleApp.Tests
             var request = GeneratePriceRequest();
             request.RiskData.DOB = DateTime.Today.AddMonths(-360);
 
-            var qutationSystem = _quotationSystemFactory.GenerateQutationSystems(request);
+            var qutationSystems = _quotationSystemFactory.GenerateQutationSystems(request);
 
-            Assert.True(typeof(QuotationSystem1) == qutationSystem[0].GetType(), $" For the request with DBO qutations system generated is {qutationSystem.GetType()}");
-            Assert.True(typeof(QuotationSystem3) == qutationSystem[1].GetType(), $" For the request with DBO qutations system generated is {qutationSystem.GetType()}");
+            var actualSystem = qutationSystems.FirstOrDefault(q => q.System == ConsoleApp1.Enums.QuotationSystem.QuotationSystem1);
 
+            Assert.IsNotNull(actualSystem, $" For the request with DBO qutations systems doesn't return a system with {ConsoleApp1.Enums.QuotationSystem.QuotationSystem1}");
+            Assert.True(typeof(QuotationSystem1) == actualSystem.GetType(), $" For the request with DBO qutations system generated is {actualSystem.GetType()}");
         }
 
         [TestCase("examplemake1", true)]
         [TestCase("examplemake2", true)]
         [TestCase("examplemake3", true)]
-        public void If_BasedOnMake_Should_Return_QuotationSystem2(string make,bool isReturnSystemQuationSystem2)
+        [TestCase("Test", false)]
+        [TestCase(null, false)]
+        public void If_BasedOnMake_Should_Return_QuotationSystem2(string make, bool isReturnSystemQuationSystem2)
         {
             var request = GeneratePriceRequest();
             request.RiskData.Make = make;
+
+            _configurationMock.Setup(m => m.QuotationSystem2_Makes).Returns(new List<string> { "examplemake1", "examplemake2", "examplemake3" });
 
             var qutationSystems = _quotationSystemFactory.GenerateQutationSystems(request);
-            qutationSystems.Where(q)
 
-
-            Assert.AreEqual(typeof(QuotationSystem2) == qutationSystems., isReturnSystemQuationSystem2, 
-                $" For the make '{make}' qutations system generated is {qutationSystems.GetType()}");
-            Assert.AreEqual(typeof(QuotationSystem3) == qutationSystems[1].GetType(), isReturnSystemQuationSystem2, 
-                $" For the make '{make}' qutations system generated is {qutationSystems.GetType()}");
-       }
-
-
-        [TestCase("no make", true)]
-        public void If_Based_on_No_Make_Should_Return_QuotationSystem2(string make, bool isReturnSystemQuationSystem2)
-        {
-            var request = GeneratePriceRequest();
-            request.RiskData.Make = make;
-
-            var qutationSystem = _quotationSystemFactory.GenerateQutationSystems(request);
-
-            Assert.AreEqual(typeof(QuotationSystem3) == qutationSystem[0].GetType(), isReturnSystemQuationSystem2, $" For the make '{make}' qutations system generated is {qutationSystem.GetType()}");
+            var actualSystem = qutationSystems.FirstOrDefault(q => q.System == ConsoleApp1.Enums.QuotationSystem.QuotationSystem2);
+            if (isReturnSystemQuationSystem2)
+            {
+                Assert.IsNotNull(actualSystem, $"For the make '{make}' qutations system factory doesn't return a system with {ConsoleApp1.Enums.QuotationSystem.QuotationSystem2}");
+                Assert.True(typeof(QuotationSystem2) == actualSystem.GetType(), $" For the request with DBO qutations system generated is {actualSystem.GetType()}");
+            }
+            else
+            {
+                Assert.IsNull(actualSystem, $" For the make '{make}' qutations system factory  return a system with {ConsoleApp1.Enums.QuotationSystem.QuotationSystem2}"); 
+            }          
         }
+
+        
 
         [Test]
         public void If_NoConditionSatisfies_Should_Return_QuotationSystem3()
         {
-            var request = GeneratePriceRequest(); 
+            var request = GeneratePriceRequest();
 
             var qutationSystem = _quotationSystemFactory.GenerateQutationSystems(request);
+            var qutationSystems = _quotationSystemFactory.GenerateQutationSystems(request);
 
-            Assert.True(typeof(QuotationSystem3) == qutationSystem[0].GetType() , $" For the default qutations system generated is {qutationSystem.GetType()}"); 
+            var actualSystem = qutationSystems.FirstOrDefault(q => q.System == ConsoleApp1.Enums.QuotationSystem.QuotationSystem3);
+
+            Assert.IsNotNull(actualSystem, $"Qutations system factory doesn't return a system with {ConsoleApp1.Enums.QuotationSystem.QuotationSystem3}");
+            Assert.True(typeof(QuotationSystem3) == actualSystem.GetType(), $"The type of system generated by Qutations system factory is {actualSystem.GetType()}");
         }
 
 

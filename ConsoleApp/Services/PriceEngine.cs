@@ -48,7 +48,7 @@ namespace ConsoleApp1.Services
                 var priceQuoteTasks = (quotationSystems.Select(quotationSystem => quotationSystem.GetPriceAsync(request))).ToList();
                 await Task.WhenAll(priceQuoteTasks);
 
-                priceResponse = _priceResponseBuilder.BuildResponse(priceQuoteTasks.Where(t => t.IsCompleted).Select(t => t.Result)?.ToList());
+                priceResponse = _priceResponseBuilder.BuildResponse(priceQuoteTasks.Select(t => t.Result)?.ToList());
             } 
 
             return priceResponse;

@@ -19,7 +19,7 @@ namespace ConsoleApp1.QuotationSystems
         {
             try
             {
-                var externalRequest = _requestResponseBuilder.BuildRequest(_system, request);
+                var externalRequest = _requestResponseBuilder.BuildRequest(System, request);
                 //makes a call to an external service - SNIP
                 //var response = _someExternalService.PostHttpRequest(requestData);
 
@@ -29,7 +29,7 @@ namespace ConsoleApp1.QuotationSystems
                 response.Name = "Test Name";
                 response.Tax = 123.45M * 0.12M;
 
-                return await Task.FromResult(_requestResponseBuilder.BuildResponse(_system, response));
+                return await Task.FromResult(_requestResponseBuilder.BuildResponse(System, response));
             }
             catch (Exception ex)
             {

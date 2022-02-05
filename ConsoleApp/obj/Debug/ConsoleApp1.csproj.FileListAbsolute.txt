@@ -13,3 +13,11 @@ C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.csproj.Sugg
 C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.exe
 C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.pdb
+C:\Users\joseg\Documents\GitHub\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\joseg\Documents\GitHub\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\joseg\Documents\GitHub\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\joseg\Documents\GitHub\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.exe
+C:\Users\joseg\Documents\GitHub\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.pdb
+C:\Users\joseg\Documents\GitHub\vineesh_priceEngine\ConsoleApp\bin\Debug\ConsoleApp1.exe.config
+C:\Users\joseg\Documents\GitHub\vineesh_priceEngine\ConsoleApp\bin\Debug\ConsoleApp1.exe
+C:\Users\joseg\Documents\GitHub\vineesh_priceEngine\ConsoleApp\bin\Debug\ConsoleApp1.pdb

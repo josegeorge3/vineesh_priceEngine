@@ -38,7 +38,7 @@ namespace ConsoleApp1.Builders
 
         public ExternalQuationResponse BuildResponse(QuotationSystem system, dynamic externalResponse)
         {
-            var res = new PriceResponse();
+            var res = new ExternalQuationResponse();
 
             switch (system)
             {
