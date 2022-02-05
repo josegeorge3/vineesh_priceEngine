@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ConsoleApp1.Enums;
 
 namespace ConsoleApp1.Model
 {
-    public class PriceEngineConfigurations : IPriceEngineConfigurations
+    public class QuotationSystemConfigurations : IQuotationSystemConfigurations
     {
         private static List<string> _quotationSystem2_Makes;
 
@@ -27,7 +25,7 @@ namespace ConsoleApp1.Model
 
         }
 
-        public QutationSystemConfiguration GetQutationSystemConfiguration(QutationSystem system)
+        public QutationSystemConfiguration GetQutationSystemConfiguration(QuotationSystem system)
         {
             return new QutationSystemConfiguration 
             {

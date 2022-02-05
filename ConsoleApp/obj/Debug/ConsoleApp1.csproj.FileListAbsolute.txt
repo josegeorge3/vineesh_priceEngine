@@ -5,3 +5,11 @@ C:\Users\joseg\Downloads\code test\ConsoleApp\obj\Debug\ConsoleApp1.csproj.Sugge
 C:\Users\joseg\Downloads\code test\ConsoleApp\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 C:\Users\joseg\Downloads\code test\ConsoleApp\obj\Debug\ConsoleApp1.exe
 C:\Users\joseg\Downloads\code test\ConsoleApp\obj\Debug\ConsoleApp1.pdb
+C:\Personal\git\vineesh_priceEngine\ConsoleApp\bin\Debug\ConsoleApp1.exe.config
+C:\Personal\git\vineesh_priceEngine\ConsoleApp\bin\Debug\ConsoleApp1.exe
+C:\Personal\git\vineesh_priceEngine\ConsoleApp\bin\Debug\ConsoleApp1.pdb
+C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.exe
+C:\Personal\git\vineesh_priceEngine\ConsoleApp\obj\Debug\ConsoleApp1.pdb

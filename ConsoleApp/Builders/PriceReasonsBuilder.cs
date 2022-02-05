@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ConsoleApp1.Builders
 {
-    public class PriceResonseBuilder : IPriceResonseBuilder
+    public class PriceReasonsBuilder : IPriceResonseBuilder
     {
         public PriceResponse BuildResponse(List<PriceResponse> priceResponses)
         {

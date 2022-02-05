@@ -1,4 +1,5 @@
 ﻿using ConsoleApp1.Builders;
+using ConsoleApp1.Enums;
 using ConsoleApp1.Model;
 using System.Dynamic;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace ConsoleApp1.QuotationSystems
     public class QuotationSystem2 : BaseQuotationSystem
     {
         public QuotationSystem2(QutationSystemConfiguration config, IExternalQuoteRequestResponseBuilder requestResponseBuilder)
-     : base(QutationSystem.QutationSystem2, config.Url, config.Port, requestResponseBuilder)
+     : base(QuotationSystem.QuotationSystem2, config.Url, config.Port, requestResponseBuilder)
         {
 
         }
