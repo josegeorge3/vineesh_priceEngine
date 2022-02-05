@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.QuotationSystems
 {
-    public abstract class BaseQuotationSystem : IQuotationSystem
+    public abstract class BaseQuotationSystem : IQuotationSystems
     {
         protected string _url { get; set; }
         protected string _port { get; set; }
@@ -21,7 +21,7 @@ namespace ConsoleApp1.QuotationSystems
         }
 
 
-        public abstract Task<PriceResponse> GetPriceAsync(PriceRequest request);
+        public abstract Task<ExternalQuationResponse> GetPriceAsync(PriceRequest request);
 
     }
 }

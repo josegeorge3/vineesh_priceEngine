@@ -46,18 +46,18 @@
   <ItemGroup>
     <Compile Include="Builders\ExternalQuoteRequestResponseBuilder.cs" />
     <Compile Include="Builders\IExternalQuoteRequestResponseBuilder.cs" />
-    <Compile Include="Builders\IPriceResonseBuilder.cs" />
+    <Compile Include="Builders\IPriceResponseBuilder.cs" />
     <Compile Include="Builders\PriceReasonsBuilder.cs" />
-    <Compile Include="Factories\IQuotationSystemFactory.cs" />
+    <Compile Include="Factories\IQuotationFactory.cs" />
     <Compile Include="Factories\QuotationSystemFactory.cs" />
     <Compile Include="Model\ExternalQuationResponse.cs" />
-    <Compile Include="Model\IQuotationSystemConfigurations.cs" />
+    <Compile Include="Model\IQuotationConfigurations.cs" />
     <Compile Include="Model\QuotationSystemConfigurations.cs" />
     <Compile Include="Model\PriceResponse.cs" />
-    <Compile Include="Model\QutationSystemConfiguration.cs" />
+    <Compile Include="Model\QutationConfiguration.cs" />
     <Compile Include="Enums\QuotationSystem.cs" />
     <Compile Include="QuotationSystems\BaseQuotationSystem.cs" />
-    <Compile Include="QuotationSystems\IQuotationSystem.cs" />
+    <Compile Include="QuotationSystems\IQuotationSystems.cs" />
     <Compile Include="Services\PriceEngine.cs" />
     <Compile Include="Model\PriceRequest.cs" />
     <Compile Include="Program.cs" />

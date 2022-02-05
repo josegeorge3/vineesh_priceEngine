@@ -31,13 +31,12 @@ namespace ConsoleApp1.Builders
                     break;               
                 default:
                     throw new NotImplementedException($"Response builder method is not implemented for {system}");
-                    break;
             }
 
             return exRequest;
         }
 
-        public PriceResponse BuildResponse(QuotationSystem system, dynamic externalResponse)
+        public ExternalQuationResponse BuildResponse(QuotationSystem system, dynamic externalResponse)
         {
             var res = new PriceResponse();
 
@@ -69,7 +68,6 @@ namespace ConsoleApp1.Builders
                     break;
                 default:
                     throw new NotImplementedException($"Response builder method is not implemented for {system}");
-                    break;
             }
 
             return res;

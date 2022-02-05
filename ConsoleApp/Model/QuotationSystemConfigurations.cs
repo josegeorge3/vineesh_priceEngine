@@ -5,7 +5,7 @@ using ConsoleApp1.Enums;
 
 namespace ConsoleApp1.Model
 {
-    public class QuotationSystemConfigurations : IQuotationSystemConfigurations
+    public class QuotationSystemConfigurations : IQuotationConfigurations
     {
         private static List<string> _quotationSystem2_Makes;
 
@@ -25,9 +25,9 @@ namespace ConsoleApp1.Model
 
         }
 
-        public QutationSystemConfiguration GetQutationSystemConfiguration(QuotationSystem system)
+        public QutationConfiguration GetQutationConfiguration(QuotationSystem system)
         {
-            return new QutationSystemConfiguration 
+            return new QutationConfiguration 
             {
                    Url = ConfigurationManager.AppSettings[$"{system}_Url"]?.ToString(),
                    Port = ConfigurationManager.AppSettings[$"{system}_Port"]?.ToString()
