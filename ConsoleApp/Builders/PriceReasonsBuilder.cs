@@ -4,19 +4,20 @@ using System.Linq;
 
 namespace ConsoleApp1.Builders
 {
-    public class PriceReasonsBuilder : IPriceResonseBuilder
+    public class PriceReasonsBuilder : IPriceResponseBuilder
     {
-        public PriceResponse BuildResponse(List<PriceResponse> priceResponses)
+
+        public PriceResponse BuildResponse(List<ExternalQuationResponse> priceResponses)
         {
+            var response = new PriceResponse() { Price = -1, Tax = 0 };
             var lowestPrice = priceResponses?.OrderBy(p => p.Price)?.FirstOrDefault();
             if (lowestPrice != null && lowestPrice.Price != 0)
             {
-                return lowestPrice;
+                response.Price = lowestPrice.Price;
+                response.InsurerName = lowestPrice.InsurerName;
+                response.Tax = lowestPrice.Tax;
             }
-            else
-            {
-                return new PriceResponse() { Price = -1, Tax = 0 };
-            }
+            return response;
         }
 
     }

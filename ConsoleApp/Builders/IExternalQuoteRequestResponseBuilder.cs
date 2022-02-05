@@ -6,6 +6,6 @@ namespace ConsoleApp1.Builders
     public interface IExternalQuoteRequestResponseBuilder
     {
         dynamic BuildRequest(QuotationSystem system, PriceRequest priceRequest);
-        PriceResponse BuildResponse(QuotationSystem system, dynamic externalResponse);
+        ExternalQuationResponse BuildResponse(QuotationSystem system, dynamic externalResponse);
     }
 }

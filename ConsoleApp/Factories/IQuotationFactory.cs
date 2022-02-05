@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 namespace ConsoleApp1.Factories
 {
-    public interface IQuotationSystemFactory
+    public interface IQuotationFactory
     {
-        IList<IQuotationSystem> GenerateQutationSystems(PriceRequest request);
+        IList<IQuotationSystems> GenerateQutationSystems(PriceRequest request);
     }
 }

@@ -15,17 +15,17 @@ namespace ConsoleApp1.Services
 
     public class PriceEngine
     {
-        private IQuotationSystemFactory _quotationSystemFactory { get; set; }
-        private IPriceResonseBuilder _priceReasonsBuilder { get; set; }
+        private IQuotationFactory _quotationSystemFactory { get; set; }
+        private IPriceResponseBuilder _priceResponseBuilder { get; set; }
         private IPriceRequestValidator _priceRequestValidator { get; set; }
         public PriceEngine() : this(new QuotationSystemFactory(new QuotationSystemConfigurations(), new ExternalQuoteRequestResponseBuilder()), new PriceReasonsBuilder(), new PriceRequestValidator())
         { 
         }
 
-        public PriceEngine(IQuotationSystemFactory quotationSystemFactory, IPriceResonseBuilder priceResonseBuilder, IPriceRequestValidator priceRequestValidator)
+        public PriceEngine(IQuotationFactory quotationSystemFactory, IPriceResponseBuilder priceResonseBuilder, IPriceRequestValidator priceRequestValidator)
         {
             _quotationSystemFactory = quotationSystemFactory;
-            _priceReasonsBuilder = priceResonseBuilder;
+            _priceResponseBuilder = priceResonseBuilder;
             _priceRequestValidator = priceRequestValidator;
         }
 
@@ -48,7 +48,7 @@ namespace ConsoleApp1.Services
                 var priceQuoteTasks = (quotationSystems.Select(quotationSystem => quotationSystem.GetPriceAsync(request))).ToList();
                 await Task.WhenAll(priceQuoteTasks);
 
-                priceResponse = _priceReasonsBuilder.BuildResponse(priceQuoteTasks.Where(t => t.IsCompleted).Select(t => t.Result)?.ToList());
+                priceResponse = _priceResponseBuilder.BuildResponse(priceQuoteTasks.Where(t => t.IsCompleted).Select(t => t.Result)?.ToList());
             } 
 
             return priceResponse;

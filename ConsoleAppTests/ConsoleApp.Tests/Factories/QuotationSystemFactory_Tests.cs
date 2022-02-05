@@ -4,6 +4,7 @@ using ConsoleApp1.Model;
 using ConsoleApp1.QuotationSystems;
 using NUnit.Framework;
 using System;
+using System.Linq;
 
 namespace ConsoleApp.Tests
 {
@@ -11,7 +12,7 @@ namespace ConsoleApp.Tests
     public class QuotationSystemFactory_Tests
     {
      
-        private IQuotationSystemFactory _quotationSystemFactory { get; set; }
+        private IQuotationFactory _quotationSystemFactory { get; set; }
         [SetUp]
         public void Initialize()
         { 
@@ -41,10 +42,14 @@ namespace ConsoleApp.Tests
             var request = GeneratePriceRequest();
             request.RiskData.Make = make;
 
-            var qutationSystem = _quotationSystemFactory.GenerateQutationSystems(request);
+            var qutationSystems = _quotationSystemFactory.GenerateQutationSystems(request);
+            qutationSystems.Where(q)
 
-            Assert.AreEqual(typeof(QuotationSystem2) == qutationSystem[0].GetType(), isReturnSystemQuationSystem2, $" For the make '{make}' qutations system generated is {qutationSystem.GetType()}");
-            Assert.AreEqual(typeof(QuotationSystem3) == qutationSystem[1].GetType(), isReturnSystemQuationSystem2, $" For the make '{make}' qutations system generated is {qutationSystem.GetType()}");
+
+            Assert.AreEqual(typeof(QuotationSystem2) == qutationSystems., isReturnSystemQuationSystem2, 
+                $" For the make '{make}' qutations system generated is {qutationSystems.GetType()}");
+            Assert.AreEqual(typeof(QuotationSystem3) == qutationSystems[1].GetType(), isReturnSystemQuationSystem2, 
+                $" For the make '{make}' qutations system generated is {qutationSystems.GetType()}");
        }
 
 
